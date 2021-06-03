@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- BÀI 1  -->
+    <h1>
+      Bài 1: Cho người dùng nhập vào 3 số nguyên. Viết chương trình xuất 3 số
+      theo thứ tự tăng dần
+    </h1>
+    <h2>Sơ đồ 3 khối</h2>
+    <p>Bước 1: Input</p>
+    <ul>
+      <li>soThuNhat, soThuHai, soThuBa</li>
+    </ul>
+    <p>Bước 2: Handle</p>
+    <ul>
+      <li>Tạo biến soThuNhat, soThuHai, soThuBa, soLonNhat</li>
+      <li>Đặt soLonNhat = soThuNhat</li>
+      <li>
+        Đặt điều kiện với vòng if (soThuHai bé hơn soThuBa) thì in ra lần lượt
+        soThuHai + soThuBa + soLonNhat còn nếu ngược lại thì in soThuBa +
+        soThuHai + soLonNhat
+      </li>
+      <li>Đặt điều kiện so sánh với vòng if (soLonNhat bé hơn soThuHai)</li>
+      <ul>
+        <li>Gán soLonNhat = soThuHai</li>
+        <li>Đặt thêm điều kiện so sánh giữa soThuNhat và soThuBa</li>
+        <li>
+          Nếu soThuNhat bé hơn soThuBa thì in ra lần lượt soThuNhat + soThuBa +
+          soLonNhat
+        </li>
+        <li>
+          Nếu soThuNhat lớn hơn soThuBa thì in ra lần lượt soThuBa + soThuNhat +
+          soLonNhat
+        </li>
+      </ul>
+      <li>Đặt điều kiện so sánh với vòng if (soLonNhat bé hơn soThuBa</li>
+      <ul>
+        <li>Gán soLonNhat = soThuBa</li>
+        <li>Đặt thêm điều kiện so sánh giữa soThuNhat và soThuHai</li>
+        <li>
+          Nếu soThuNhat bé hơn soThuHai thì in ra lần lượt soThuNhat + soThuHai
+          + soLonNhat
+        </li>
+        <li>Ngược lại thì in ra soThuHai + soThuNhat + soLonNhat</li>
+      </ul>
+    </ul>
+    <p>Bước 3: Output</p>
+    <ul>
+      <li>Xuất 3 số theo thứ tự tăng dần</li>
+    </ul>
+    <form>
+      <div class="form-group">
+        <label for="">Nhập số thứ nhất</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Số thứ nhất"
+          id="soThuNhat"
+        />
+        <label for="">Nhập số thứ hai</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Số thứ hai"
+          id="soThuHai"
+        />
+        <label for="">Nhập số thứ ba</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Số thứ ba"
+          id="soThuBa"
+        />
+      </div>
+      <input
+        name=""
+        id="btnBai1"
+        class="btn btn-primary"
+        type="button"
+        value="Tính"
+      />
+      <p id="ketQuaBai1"></p>
+    </form>
+
+    <!-- BÀI 2 -->
+    <h1>
+      Bài 2: Viết chương trình “Chào hỏi” các thành viên trong gia đình với các
+      đặc điểm. Đầu tiên máy sẽ hỏi ai sử dụng máy. Sau đó dựa vào câu trả lời
+      và đưa ra lời chào phù hợp. Giả sử trong gia đình có 4 thành viên: Bố (B),
+      Mẹ (M), anh Trai (A) và Em gái (E)
+    </h1>
+    <h2>Sơ đồ 3 khối</h2>
+    <p>Bước 1: Input</p>
+    <ul>
+      <li>4 giá trị bao gồm</li>
+      <ul>
+        <li>Bố - B</li>
+        <li>Mẹ - M</li>
+        <li>Anh Trai - A</li>
+        <li>Em - E</li>
+      </ul>
+    </ul>
+    <p>Bước 2: Handle</p>
+    <ul>
+      <li>Tạo biến chonNguoiSuDung</li>
+      <li>Sử dụng switch case với giá trị là (chonNguoiSuDung)</li>
+      <li>Sau đó xét từng case (B), (M), (A), (E)</li>
+    </ul>
+    <p>Bước 3: Output</p>
+    <ul>
+      <li>Alert ra kết quả và in ra màn hình.</li>
+    </ul>
+    <form>
+      <div class="form-group">
+        <select class="form-control" id="chonNguoiSuDung">
+          <option disabled>--Chọn người sử dụng--</option>
+          <option value="B">Bố</option>
+          <option value="M">Mẹ</option>
+          <option value="A">Anh Trai</option>
+          <option value="E">Em gái</option>
+        </select>
+      </div>
+      <input
+        name=""
+        id="btnBai2"
+        class="btn btn-primary"
+        type="button"
+        value="Kết quả"
+      />
+      <p id="ketQuaBai2"></p>
+    </form>
+
+    <!-- BÀI 3 -->
+    <h1>
+      Bài 3: Cho 3 số nguyên. Viết chương trình xuất ra có bao nhiêu số lẻ và
+      bao nhiêu số chẵn
+    </h1>
+    <h2>Sơ đồ 3 khối</h2>
+    <p>Bước 1: Input</p>
+    <ul>
+      <li>soNguyenThuNhat, soNguyenThuHai, soNguyenThuBa</li>
+    </ul>
+    <p>Bước 2: Handle</p>
+    <ul>
+      <li>
+        Tạo 5 biến soNguyenThuNhat, soNguyenThuHai, soNguyenThuBa, soLuongSoChan
+        và soLuongSoLe
+      </li>
+      <li>
+        Đặt vòng if với điều kiên (soNguyenThuNhat % 2 == 0) sau đó nếu đúng thì
+        soLuongSoChan tăng lên 1, còn không thì soLuongSoLe tăng lên 1. Tương tự
+        như 2 trường hợp còn lại.
+      </li>
+    </ul>
+    <p>Bước 3: Output</p>
+    <ul>
+      <li>Xuất ra số lượng số chẵn và số lẻ</li>
+    </ul>
+    <form>
+      <div class="form-group">
+        <label for="">Nhập số thứ nhất</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Số thứ nhất"
+          id="soNguyenThuNhat"
+        />
+        <label for="">Nhập số thứ hai</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Số thứ hai"
+          id="soNguyenThuHai"
+        />
+        <label for="">Nhập số thứ ba</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Số thứ ba"
+          id="soNguyenThuBa"
+        />
+      </div>
+      <input
+        name=""
+        id="btnBai3"
+        class="btn btn-primary"
+        type="button"
+        value="Tính"
+      />
+      <p id="tongSoChan"></p>
+      <p id="tongSoLe"></p>
+    </form>
+    <!-- BÀI 4 -->
+    <h1>
+      Bài 4: Viết chương trình cho nhập 3 cạnh của tam giác. Hãy cho biết đó là tam giác gì?
+    </h1>
+    <p><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Tam_gi%C3%A1c_vu%C3%B4ng.PNG#/media/Tập_tin:Tam_giác_vuông.PNG"><img src="https://upload.wikimedia.org/wikipedia/vi/8/82/Tam_gi%C3%A1c_vu%C3%B4ng.PNG" alt="Tam giác vuông.PNG"></a><br>CC BY-SA 3.0, <a href="https://vi.wikipedia.org/w/index.php?curid=10713">Liên kết</a></p>
+    <h2>Sơ đồ 3 khối</h2>
+    <p>Bước 1: Input</p>
+    <ul>
+      <li>canhHuyen(h), canhDoi(a), canhKe(b)</li>
+    </ul>
+    <p>Bước 2: Handle</p>
+    <ul>
+      <li>
+        Tạo 5 biến soNguyenThuNhat, soNguyenThuHai, soNguyenThuBa, soLuongSoChan
+        và soLuongSoLe
+      </li>
+      <li>
+        Đặt vòng if với điều kiên (soNguyenThuNhat % 2 == 0) sau đó nếu đúng thì
+        soLuongSoChan tăng lên 1, còn không thì soLuongSoLe tăng lên 1. Tương tự
+        như 2 trường hợp còn lại.
+      </li>
+    </ul>
+    <p>Bước 3: Output</p>
+    <ul>
+      <li>Xuất ra số lượng số chẵn và số lẻ</li>
+    </ul>
+    <form>
+      <div class="form-group">
+        <label for="">Nhập độ dài cạnh huyền (h)</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Nhập độ dài cạnh huyền"
+          id="canhHuyen"
+        />
+        <label for="">Nhập độ dài cạnh đối (a)</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Nhập độ dài cạnh đối"
+          id="canhDoi"
+        />
+        <label for="">Nhập độ dài cạnh kề (b)</label>
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Nhập độ dài cạnh kề"
+          id="canhKe"
+        />
+      </div>
+      <input
+        name=""
+        id="btnBai4"
+        class="btn btn-primary"
+        type="button"
+        value="Tính"
+      />
+      <p id="ketQuaBai4"></p>
+    </form>
+    <!-- MAIN JS -->
+    <script src="index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
