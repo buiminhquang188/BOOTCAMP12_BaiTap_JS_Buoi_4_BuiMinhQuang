@@ -165,9 +165,9 @@
         và soLuongSoLe
       </li>
       <li>
-        Đặt vòng if với điều kiên (soNguyenThuNhat % 2 == 0) sau đó nếu đúng thì
-        soLuongSoChan tăng lên 1, còn không thì soLuongSoLe tăng lên 1. Tương tự
-        như 2 trường hợp còn lại.
+        Đặt câu điều kiện if với điều kiên (soNguyenThuNhat % 2 == 0) sau đó nếu
+        đúng thì soLuongSoChan tăng lên 1, còn không thì soLuongSoLe tăng lên 1.
+        Tương tự như 2 trường hợp còn lại.
       </li>
     </ul>
     <p>Bước 3: Output</p>
@@ -210,9 +210,18 @@
     </form>
     <!-- BÀI 4 -->
     <h1>
-      Bài 4: Viết chương trình cho nhập 3 cạnh của tam giác. Hãy cho biết đó là tam giác gì?
+      Bài 4: Viết chương trình cho nhập 3 cạnh của tam giác. Hãy cho biết đó là
+      tam giác gì?
     </h1>
-    <p><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Tam_gi%C3%A1c_vu%C3%B4ng.PNG#/media/Tập_tin:Tam_giác_vuông.PNG"><img src="https://upload.wikimedia.org/wikipedia/vi/8/82/Tam_gi%C3%A1c_vu%C3%B4ng.PNG" alt="Tam giác vuông.PNG"></a><br>CC BY-SA 3.0, <a href="https://vi.wikipedia.org/w/index.php?curid=10713">Liên kết</a></p>
+    <p>
+      <a
+        href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Tam_gi%C3%A1c_vu%C3%B4ng.PNG#/media/Tập_tin:Tam_giác_vuông.PNG"
+        ><img
+          src="https://upload.wikimedia.org/wikipedia/vi/8/82/Tam_gi%C3%A1c_vu%C3%B4ng.PNG"
+          alt="Tam giác vuông.PNG" /></a
+      ><br />CC BY-SA 3.0,
+      <a href="https://vi.wikipedia.org/w/index.php?curid=10713">Liên kết</a>
+    </p>
     <h2>Sơ đồ 3 khối</h2>
     <p>Bước 1: Input</p>
     <ul>
@@ -220,15 +229,30 @@
     </ul>
     <p>Bước 2: Handle</p>
     <ul>
+      <li>Tạo 4 biến là canhHuyen, canhDoi, canhKe và doDaiCanhHuyen</li>
       <li>
-        Tạo 5 biến soNguyenThuNhat, soNguyenThuHai, soNguyenThuBa, soLuongSoChan
-        và soLuongSoLe
+        doDaiCanhHuyen được tính bằng công thức định lý pytago bởi căn bậc hai
+        của canhDoi bình phương và cạnh huyền bình phương
       </li>
-      <li>
-        Đặt vòng if với điều kiên (soNguyenThuNhat % 2 == 0) sau đó nếu đúng thì
-        soLuongSoChan tăng lên 1, còn không thì soLuongSoLe tăng lên 1. Tương tự
-        như 2 trường hợp còn lại.
-      </li>
+      <li>Đặt câu điều kiện if</li>
+      <ul>
+        <li>
+          TH1: Nếu canhKe và canhDoi bằng nhau, canhKe và canhDoi đều không bằng
+          canhHuyen thì tam giác đó là tam giác cân
+        </li>
+        <li>
+          TH2: Nếu canhKe và canhDOi bằng nhau, canhKe và canhDoi đều bằng
+          canhHuyen thì tam giác đó là tam giác đều
+        </li>
+        <li>
+          TH3: Nếu canhHuyen và doDaiCanhHuyen bằng nhau thì tam giác đó là tam
+          giác vuông
+        </li>
+        <li>
+          TH4: Nếu các cạnh không bằng nhau và canhHuyen không bằng
+          doDaicanhHuyen thì đó là tam giác thường
+        </li>
+      </ul>
     </ul>
     <p>Bước 3: Output</p>
     <ul>
