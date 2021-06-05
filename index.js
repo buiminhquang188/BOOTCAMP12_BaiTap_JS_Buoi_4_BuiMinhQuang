@@ -5,30 +5,37 @@ btnBai1.onclick = function () {
     var soThuBa = document.getElementById('soThuBa').valueAsNumber;
     var soLonNhat = soThuNhat;
     var ketQuaBai1 = document.getElementById('ketQuaBai1');
-
-    if (soThuHai < soThuBa) {
-        ketQuaBai1.innerHTML = '' + soThuHai + ' ' + soThuBa + ' ' + soLonNhat;
+    if (isNaN(soThuNhat) || isNaN(soThuHai) || isNaN(soThuBa)) {
+        alert('Bạn phải nhập đủ 3 số');
+    }
+    else if (Number.isInteger(soThuNhat) && Number.isInteger(soThuHai) && Number.isInteger(soThuBa)) {
+        if (soThuHai < soThuBa) {
+            ketQuaBai1.innerHTML = '' + soThuHai + ' ' + soThuBa + ' ' + soLonNhat;
+        }
+        else {
+            ketQuaBai1.innerHTML = '' + soThuBa + ' ' + soThuHai + ' ' + soLonNhat;
+        }
+        if (soLonNhat < soThuHai) {
+            soLonNhat = soThuHai;
+            if (soThuNhat < soThuBa) {
+                ketQuaBai1.innerHTML = '' + soThuNhat + ' ' + soThuBa + ' ' + soLonNhat;
+            }
+            else {
+                ketQuaBai1.innerHTML = ' ' + soThuBa + ' ' + soThuNhat + ' ' + soLonNhat;
+            }
+        }
+        if (soLonNhat < soThuBa) {
+            soLonNhat = soThuBa;
+            if (soThuNhat < soThuHai) {
+                ketQuaBai1.innerHTML = '' + soThuNhat + ' ' + soThuHai + ' ' + soLonNhat;
+            }
+            else {
+                ketQuaBai1.innerHTML = '' + soThuHai + ' ' + soThuNhat + ' ' + soLonNhat;
+            }
+        }
     }
     else {
-        ketQuaBai1.innerHTML = '' + soThuBa + ' ' + soThuHai + ' ' + soLonNhat;
-    }
-    if (soLonNhat < soThuHai) {
-        soLonNhat = soThuHai;
-        if (soThuNhat < soThuBa) {
-            ketQuaBai1.innerHTML = '' + soThuNhat + ' ' + soThuBa + ' ' + soLonNhat;
-        }
-        else {
-            ketQuaBai1.innerHTML = ' ' + soThuBa + ' ' + soThuNhat + ' ' + soLonNhat;
-        }
-    }
-    if (soLonNhat < soThuBa) {
-        soLonNhat = soThuBa;
-        if (soThuNhat < soThuHai) {
-            ketQuaBai1.innerHTML = '' + soThuNhat + ' ' + soThuHai + ' ' + soLonNhat;
-        }
-        else {
-            ketQuaBai1.innerHTML = '' + soThuHai + ' ' + soThuNhat + ' ' + soLonNhat;
-        }
+        alert('Bạn phải nhập 3 số nguyên');
     }
 }
 // BÀI 2:
@@ -66,26 +73,35 @@ btnBai3.onclick = function () {
     var tongSoChan = document.getElementById('tongSoChan');
     var tongSoLe = document.getElementById('tongSoLe');
 
-    if (soNguyenThuNhat % 2 == 0) {
-        soLuongSoChan++;
+    if (isNaN(soNguyenThuNhat) || isNaN(soNguyenThuHai) || isNaN(soNguyenThuBa)
+    ) {
+        alert('Bạn phải nhập đủ 3 số');
+    }
+    else if (Number.isInteger(soNguyenThuNhat) && Number.isInteger(soNguyenThuHai) && Number.isInteger(soNguyenThuBa)) {
+        if (soNguyenThuNhat % 2 == 0) {
+            soLuongSoChan++;
+        }
+        else {
+            soLuongSoLe++;
+        }
+        if (soNguyenThuHai % 2 == 0) {
+            soLuongSoChan++;
+        }
+        else {
+            soLuongSoLe++;
+        }
+        if (soNguyenThuBa % 2 == 0) {
+            soLuongSoChan++;
+        }
+        else {
+            soLuongSoLe++;
+        }
+        tongSoChan.innerHTML = 'Số lượng số chẵn là: ' + soLuongSoChan;
+        tongSoLe.innerHTML = 'Số lượng số lẻ là: ' + soLuongSoLe;
     }
     else {
-        soLuongSoLe++;
+        alert('Bạn phải nhập 3 số nguyên');
     }
-    if (soNguyenThuHai % 2 == 0) {
-        soLuongSoChan++;
-    }
-    else {
-        soLuongSoLe++;
-    }
-    if (soNguyenThuBa % 2 == 0) {
-        soLuongSoChan++;
-    }
-    else {
-        soLuongSoLe++;
-    }
-    tongSoChan.innerHTML = 'Số lượng số chẵn là: ' + soLuongSoChan;
-    tongSoLe.innerHTML = 'Số lượng số lẻ là: ' + soLuongSoLe;
 }
 
 //BÀI 4:
