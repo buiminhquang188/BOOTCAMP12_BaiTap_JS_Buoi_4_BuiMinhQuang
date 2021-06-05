@@ -99,11 +99,20 @@ btnBai4.onclick = function () {
     if (canhKe == canhDoi && canhKe !== canhHuyen && canhDoi !== canhHuyen) {
         ketQuaBai4.innerHTML = 'Tam giác là tam giác cân';
     }
+    else {
+        ketQuaBai4.innerHTML = 'Tma giác là tam giác thường';
+    }
     if (canhKe == canhDoi && canhKe == canhHuyen && canhDoi == canhHuyen) {
         ketQuaBai4.innerHTML = 'Tam giác là tam giác đều';
     }
+    else {
+        ketQuaBai4.innerHTML = 'Tam giác là tam giác thường';
+    }
     if (canhHuyen == doDaiCanhHuyen) {
         ketQuaBai4.innerHTML = 'Tam giác là tam giác vuông';
+    }
+    else {
+        ketQuaBai4.innerHTML = 'Tam giác là tam giác thường'
     }
     if (canhKe !== canhDoi && canhKe !== canhHuyen && canhDoi !== canhHuyen && canhHuyen !== doDaiCanhHuyen) {
         ketQuaBai4.innerHTML = 'Tam giác là tam giác thường';
